@@ -14,7 +14,7 @@ import joblib
 app = Flask(__name__)
 
 # Number of images to take for each user
-nimgs = 10
+nimgs = 20
 
 # Saving Date today in 2 different formats
 datetoday = date.today().strftime("%m_%d_%y")
@@ -50,16 +50,6 @@ def extract_faces(img):
    return face_points
  else:
   print("Image is empty. Cannot perform the operation.")
-
-#def extract_faces(img):
- #   if img != []:
-       # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-      #  face_points = face_detector.detectMultiScale(
-     #       gray, 1.2, 5, minSize=(20, 20))
-    #    return face_points
-   # else:
-  #      return []
-
 
 # Identify face using ML model
 def identify_face(facearray):
